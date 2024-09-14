@@ -1,0 +1,188 @@
+---- Minecraft Crash Report ----
+// I just don't know what went wrong :(
+
+Time: 2024-08-28 14:02:13
+Description: Exception in server tick loop
+
+java.lang.IllegalStateException: Shutdown in progress
+	at java.lang.ApplicationShutdownHooks.add(Unknown Source) ~[?:?] {}
+	at java.lang.Runtime.addShutdownHook(Unknown Source) ~[?:?] {}
+	at com.sun.imageio.stream.StreamCloser.lambda$addToQueue$0(Unknown Source) ~[?:?] {}
+	at java.security.AccessController.doPrivileged(Unknown Source) ~[?:?] {}
+	at com.sun.imageio.stream.StreamCloser.addToQueue(Unknown Source) ~[?:?] {}
+	at javax.imageio.stream.FileCacheImageOutputStream.<init>(Unknown Source) ~[?:?] {}
+	at com.sun.imageio.spi.OutputStreamImageOutputStreamSpi.createOutputStreamInstance(Unknown Source) ~[?:?] {}
+	at javax.imageio.ImageIO.createImageOutputStream(Unknown Source) ~[?:?] {}
+	at javax.imageio.ImageIO.write(Unknown Source) ~[?:?] {}
+	at org.dynmap.servlet.MapStorageResourceHandler.<init>(MapStorageResourceHandler.java:36) ~[Dynmap-3.6-forge-1.20.jar%23224!/:?] {re:classloading}
+	at org.dynmap.DynmapCore$3$2.<init>(DynmapCore.java:1007) ~[Dynmap-3.6-forge-1.20.jar%23224!/:?] {re:classloading}
+	at org.dynmap.DynmapCore$3.<init>(DynmapCore.java:1007) ~[Dynmap-3.6-forge-1.20.jar%23224!/:?] {re:classloading}
+	at org.dynmap.DynmapCore.loadWebserver(DynmapCore.java:977) ~[Dynmap-3.6-forge-1.20.jar%23224!/:?] {re:classloading}
+	at org.dynmap.DynmapCore.enableCore(DynmapCore.java:640) ~[Dynmap-3.6-forge-1.20.jar%23224!/:?] {re:classloading}
+	at org.dynmap.forge_1_20.DynmapPlugin.onStart(DynmapPlugin.java:1537) ~[Dynmap-3.6-forge-1.20.jar%23224!/:?] {re:classloading}
+	at org.dynmap.forge_1_20.DynmapPlugin.serverStarted(DynmapPlugin.java:1972) ~[Dynmap-3.6-forge-1.20.jar%23224!/:?] {re:classloading}
+	at org.dynmap.forge_1_20.DynmapMod.onServerStarted(DynmapMod.java:127) ~[Dynmap-3.6-forge-1.20.jar%23224!/:?] {re:classloading}
+	at org.dynmap.forge_1_20.__DynmapMod_onServerStarted_ServerStartedEvent.invoke(.dynamic) ~[Dynmap-3.6-forge-1.20.jar%23224!/:?] {re:classloading,pl:eventbus:B}
+	at net.minecraftforge.eventbus.ASMEventHandler.invoke(ASMEventHandler.java:73) ~[eventbus-6.0.5.jar%2352!/:?] {}
+	at net.minecraftforge.eventbus.EventBus.post(EventBus.java:315) ~[eventbus-6.0.5.jar%2352!/:?] {}
+	at net.minecraftforge.eventbus.EventBus.post(EventBus.java:296) ~[eventbus-6.0.5.jar%2352!/:?] {}
+	at net.minecraftforge.server.ServerLifecycleHooks.handleServerStarted(ServerLifecycleHooks.java:115) ~[forge-1.20.1-47.3.6-universal.jar%23268!/:?] {re:classloading}
+	at net.minecraft.server.MinecraftServer.m_130011_(MinecraftServer.java:638) ~[server-1.20.1-20230612.114412-srg.jar%23263!/:?] {re:mixin,pl:accesstransformer:B,re:computing_frames,pl:accesstransformer:B,re:classloading,pl:accesstransformer:B,pl:mixin:A}
+	at net.minecraft.server.MinecraftServer.m_206580_(MinecraftServer.java:251) ~[server-1.20.1-20230612.114412-srg.jar%23263!/:?] {re:mixin,pl:accesstransformer:B,re:computing_frames,pl:accesstransformer:B,re:classloading,pl:accesstransformer:B,pl:mixin:A}
+	at java.lang.Thread.run(Unknown Source) ~[?:?] {}
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- System Details --
+Details:
+	Minecraft Version: 1.20.1
+	Minecraft Version ID: 1.20.1
+	Operating System: Linux (amd64) version 6.1.79-Unraid
+	Java Version: 21.0.4, Eclipse Adoptium
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode, sharing), Eclipse Adoptium
+	Memory: 21002861520 bytes (20029 MiB) / 25769803776 bytes (24576 MiB) up to 25769803776 bytes (24576 MiB)
+	CPUs: 20
+	Processor Vendor: GenuineIntel
+	Processor Name: 12th Gen Intel(R) Core(TM) i9-12900H
+	Identifier: Intel64 Family 6 Model 154 Stepping 3
+	Microarchitecture: Alder Lake
+	Frequency (GHz): -0.00
+	Number of physical packages: 1
+	Number of physical CPUs: 14
+	Number of logical CPUs: 20
+	Graphics card #0 name: unknown
+	Graphics card #0 vendor: unknown
+	Graphics card #0 VRAM (MB): 0.00
+	Graphics card #0 deviceId: unknown
+	Graphics card #0 versionInfo: unknown
+	Virtual memory max (MB): 32026.13
+	Virtual memory used (MB): 42728.52
+	Swap memory total (MB): 0.00
+	Swap memory used (MB): 0.00
+	JVM Flags: 2 total; -Xmx24G -Xms24G
+	Server Running: false
+	Player Count: 0 / 20; []
+	Data Packs: vanilla, mod:advancedperipherals (incompatible), mod:geckolib, mod:createdeco (incompatible), mod:cccbridge (incompatible), mod:botarium (incompatible), mod:mcwwindows, mod:create_deepfried, mod:create_more_automation, mod:ritchiesprojectilelib (incompatible), mod:fabric_data_attachment_api_v1, mod:mixinextras (incompatible), mod:numismatics (incompatible), mod:create_dragon_lib (incompatible), mod:createdieselgenerators (incompatible), mod:mcwdoors, mod:railways, mod:interiors (incompatible), mod:cloth_config (incompatible), mod:supplementaries, mod:embeddium, mod:createcafe (incompatible), mod:create_oxidized, mod:mcwbridges, mod:create_crafts_renewed, mod:mcwtrpdoors, mod:mcwfences, mod:createmoredrillheads, mod:baubly, mod:create_additions_synthetics, mod:saros__money_mod, mod:curios, mod:createarmory, mod:suppsquared (incompatible), mod:fabric_entity_events_v1, mod:resourcefullib (incompatible), mod:accessories, mod:createliquidfuel (incompatible), mod:architectury (incompatible), mod:computercraft, mod:mcwfurnitures, mod:create_deepslate_processing (incompatible), mod:mcwlights, mod:estrogen (incompatible), mod:bellsandwhistles, mod:createbigcannons (incompatible), mod:trainutilities, mod:copycats (incompatible), mod:jei, mod:ae2 (incompatible), mod:ae2wtlib (incompatible), mod:createappliedkinetics (incompatible), mod:saros_construction_mod, mod:create_copper_and_zinc, mod:createchunkloading (incompatible), mod:mcwpaintings, mod:journeymap (incompatible), mod:mr_lukis_grandcapitals, mod:design_decor (incompatible), mod:create_bic_bit, mod:saros_road_signs_mod, mod:terralith, mod:forge, mod:moderntrainparts (incompatible), mod:tfmg (incompatible), mod:mcwpaths, mod:jukeboxfix (incompatible), mod:tectonic (incompatible), mod:protection_pixel, mod:dragonlib, mod:moonlight (incompatible), mod:fabric_api_base, mod:mixinsquared (incompatible), mod:kotlinforforge (incompatible), mod:createstation_decor, mod:flywheel, mod:create, mod:createrailwaysnavigator, mod:ae2qolrecipes (incompatible), mod:create_mixed_copper_tools, mod:create_pattern_schematics (incompatible), mod:automobility (incompatible), mod:fabric_object_builder_api_v1, mod:createtrackmap (incompatible), mod:saros_road_blocks_mod, mod:valkyrienskies (incompatible), mod:vs_eureka (incompatible), mod:vs_clockwork (incompatible), mod:cc_vs (incompatible), mod:create_enchantment_industry (incompatible), mod:createdynlight, Supplementaries Generated Pack, Suppsquared Generated Pack, createappliedkinetics:remove_ae_recipes (incompatible), tectonic/terratonic, mod:simplebackups, mod:dynmap, mod:dynmapblockscan
+	Enabled Feature Flags: minecraft:vanilla
+	World Generation: Experimental
+	Is Modded: Definitely; Server brand changed to 'forge'
+	Type: Dedicated Server (map_server.txt)
+	ModLauncher: 10.0.9+10.0.9+main.dcd20f30
+	ModLauncher launch target: forgeserver
+	ModLauncher naming: srg
+	ModLauncher services: 
+		mixin-0.8.5.jar mixin PLUGINSERVICE 
+		eventbus-6.0.5.jar eventbus PLUGINSERVICE 
+		fmlloader-1.20.1-47.3.6.jar slf4jfixer PLUGINSERVICE 
+		fmlloader-1.20.1-47.3.6.jar object_holder_definalize PLUGINSERVICE 
+		fmlloader-1.20.1-47.3.6.jar runtime_enum_extender PLUGINSERVICE 
+		fmlloader-1.20.1-47.3.6.jar capability_token_subclass PLUGINSERVICE 
+		accesstransformers-8.0.4.jar accesstransformer PLUGINSERVICE 
+		fmlloader-1.20.1-47.3.6.jar runtimedistcleaner PLUGINSERVICE 
+		modlauncher-10.0.9.jar mixin TRANSFORMATIONSERVICE 
+		modlauncher-10.0.9.jar fml TRANSFORMATIONSERVICE 
+	FML Language Providers: 
+		minecraft@1.0
+		lowcodefml@null
+		kotlinforforge@4.11.0
+		javafml@null
+	Mod List: 
+		AdvancedPeripherals-1.20.1-0.7.40r.jar            |Advanced Peripherals          |advancedperipherals           |0.7.40r             |DONE      |Manifest: NOSIGNATURE
+		geckolib-forge-1.20.1-4.4.7.jar                   |GeckoLib 4                    |geckolib                      |4.4.7               |DONE      |Manifest: NOSIGNATURE
+		createdeco-2.0.2-1.20.1-forge.jar                 |Create Deco                   |createdeco                    |2.0.2-1.20.1-forge  |DONE      |Manifest: NOSIGNATURE
+		cccbridge-mc1.20.1-forge-1.6.3.jar                |CC:C Bridge                   |cccbridge                     |1.6.3-forge         |DONE      |Manifest: NOSIGNATURE
+		botarium-forge-1.20.1-2.3.4.jar                   |Botarium                      |botarium                      |2.3.4               |DONE      |Manifest: NOSIGNATURE
+		mcw-windows-2.3.0-mc1.20.1forge.jar               |Macaw's Windows               |mcwwindows                    |2.3.0               |DONE      |Manifest: NOSIGNATURE
+		create_deepfried-1.20.1-0.1.1.jar                 |Create: Deepfried             |create_deepfried              |0.1.1               |DONE      |Manifest: NOSIGNATURE
+		CreateMoreAutomation-1.20.1-0.4.0.jar             |Create: More Automation       |create_more_automation        |0.3.0               |DONE      |Manifest: NOSIGNATURE
+		ritchiesprojectilelib-2.0.0-dev+mc.1.20.1-forge-bu|Ritchie's Projectile Library  |ritchiesprojectilelib         |2.0.0-dev+mc.1.20.1-|DONE      |Manifest: NOSIGNATURE
+		fabric-data-attachment-api-v1-1.0.0+30ef839e77.jar|Fabric Data Attachment API (v1|fabric_data_attachment_api_v1 |1.0.0+30ef839e77    |DONE      |Manifest: NOSIGNATURE
+		mixinextras-forge-0.3.6.jar                       |MixinExtras                   |mixinextras                   |0.3.6               |DONE      |Manifest: NOSIGNATURE
+		CreateNumismatics-1.0.6+forge-mc1.20.1.jar        |Create: Numismatics           |numismatics                   |1.0.6+forge-mc1.20.1|DONE      |Manifest: NOSIGNATURE
+		create_dragon_lib-1.20.1-1.4.3.jar                |Create: Dragon Lib            |create_dragon_lib             |1.4.3               |DONE      |Manifest: NOSIGNATURE
+		createdieselgenerators-1.20.1-1.2i.jar            |Create Diesel Generators      |createdieselgenerators        |1.20.1-1.2i         |DONE      |Manifest: NOSIGNATURE
+		mcw-doors-1.1.1forge-mc1.20.1.jar                 |Macaw's Doors                 |mcwdoors                      |1.1.1               |DONE      |Manifest: NOSIGNATURE
+		Steam_Rails-1.6.4+forge-mc1.20.1.jar              |Create: Steam 'n' Rails       |railways                      |1.6.4+forge-mc1.20.1|DONE      |Manifest: NOSIGNATURE
+		interiors-0.5.4+forge-mc1.20.1.jar                |Create: Interiors             |interiors                     |0.5.4+forge-mc1.20.1|DONE      |Manifest: NOSIGNATURE
+		cloth-config-11.1.118-forge.jar                   |Cloth Config v10 API          |cloth_config                  |11.1.118            |DONE      |Manifest: NOSIGNATURE
+		supplementaries-1.20-2.8.17.jar                   |Supplementaries               |supplementaries               |1.20-2.8.17         |DONE      |Manifest: NOSIGNATURE
+		embeddium-0.3.30+mc1.20.1.jar                     |Embeddium                     |embeddium                     |0.3.30+mc1.20.1     |DONE      |Manifest: NOSIGNATURE
+		createcafe-1.2.4-1.20.1.jar                       |Create Cafe                   |createcafe                    |1.2.4-1.20.1        |DONE      |Manifest: NOSIGNATURE
+		create_oxidized-0.1.1.jar                         |Create: Oxidized              |create_oxidized               |0.1.1               |DONE      |Manifest: NOSIGNATURE
+		mcw-bridges-3.0.0-mc1.20.1forge.jar               |Macaw's Bridges               |mcwbridges                    |3.0.0               |DONE      |Manifest: NOSIGNATURE
+		create_crafts_renewed-1.9.2 [Forge 1.20.1].jar    |Create Crafts Renewed         |create_crafts_renewed         |1.9.2               |DONE      |Manifest: NOSIGNATURE
+		mcw-trapdoors-1.1.3-mc1.20.1forge.jar             |Macaw's Trapdoors             |mcwtrpdoors                   |1.1.3               |DONE      |Manifest: NOSIGNATURE
+		mcw-fences-1.1.2-mc1.20.1forge.jar                |Macaw's Fences and Walls      |mcwfences                     |1.1.2               |DONE      |Manifest: NOSIGNATURE
+		createmoredrillheads-2.0.3-1.20.1.jar             |Create: More Drill Heads      |createmoredrillheads          |2.0.3-1.20.1        |DONE      |Manifest: NOSIGNATURE
+		baubly-forge-1.20.1-1.0.1.jar                     |Baubly                        |baubly                        |1.0.1               |DONE      |Manifest: NOSIGNATURE
+		create_additions_synthetics-3.2.1-forge-1.20.1.jar|Create Additions & Synthetics |create_additions_synthetics   |3.2.1               |DONE      |Manifest: NOSIGNATURE
+		Saros-Money-Mod.1.20.1-3.0.jar                    |Saro´s Money Mod              |saros__money_mod              |3.0                 |DONE      |Manifest: NOSIGNATURE
+		accessories_cclayer-7.4.0-beta.11+1.20.1.jar      |curios                        |curios                        |7.4.0+1.20.1        |DONE      |Manifest: NOSIGNATURE
+		createarmoryv0.6.1n.jar                           |CreateArmory                  |createarmory                  |0.5                 |DONE      |Manifest: NOSIGNATURE
+		suppsquared-1.20-1.1.14.jar                       |Supplementaries Squared       |suppsquared                   |1.20-1.1.14         |DONE      |Manifest: NOSIGNATURE
+		fabric-entity-events-v1-1.6.0+6274ab9d77.jar      |Fabric Entity Events (v1)     |fabric_entity_events_v1       |1.6.0+6274ab9d77    |DONE      |Manifest: NOSIGNATURE
+		resourcefullib-forge-1.20.1-2.1.29.jar            |Resourceful Lib               |resourcefullib                |2.1.29              |DONE      |Manifest: NOSIGNATURE
+		accessories-neoforge-1.0.0-beta.30+1.20.1.jar     |Accessories                   |accessories                   |1.0.0-beta30+1.20.1 |DONE      |Manifest: NOSIGNATURE
+		createliquidfuel-2.1.1-1.20.1.jar                 |Create Liquid Fuel            |createliquidfuel              |2.1.1-1.20.1        |DONE      |Manifest: NOSIGNATURE
+		architectury-9.2.14-forge.jar                     |Architectury                  |architectury                  |9.2.14              |DONE      |Manifest: NOSIGNATURE
+		cc-tweaked-1.20.1-forge-1.113.0.jar               |CC: Tweaked                   |computercraft                 |1.113.0             |DONE      |Manifest: NOSIGNATURE
+		mcw-furniture-3.3.0-mc1.20.1forge.jar             |Macaw's Furniture             |mcwfurnitures                 |3.3.0               |DONE      |Manifest: NOSIGNATURE
+		create_deepslate_processing-2.0.1+forge-1.20.1.jar|Create: Deepslate Processing  |create_deepslate_processing   |2.0.1               |DONE      |Manifest: NOSIGNATURE
+		mcw-lights-1.1.0-mc1.20.1forge.jar                |Macaw's Lights and Lamps      |mcwlights                     |1.1.0               |DONE      |Manifest: NOSIGNATURE
+		Estrogen-4.2.10+1.20.1-forge.jar                  |Create: Estrogen              |estrogen                      |4.2.10+1.20.1-forge |DONE      |Manifest: NOSIGNATURE
+		bellsandwhistles-0.4.3-1.20.x.jar                 |Create: Bells & Whistles      |bellsandwhistles              |0.4.3-1.20.x        |DONE      |Manifest: NOSIGNATURE
+		createbigcannons-5.5.1+mc.1.20.1-forge.jar        |Create Big Cannons            |createbigcannons              |5.5.1+mc.1.20.1-forg|DONE      |Manifest: NOSIGNATURE
+		trainutilities-forge-2.2.0.jar                    |Create: TrainUtilities        |trainutilities                |2.2.0               |DONE      |Manifest: NOSIGNATURE
+		copycats-2.1.2+mc.1.20.1-forge.jar                |Create: Copycats+             |copycats                      |2.1.2+mc.1.20.1-forg|DONE      |Manifest: NOSIGNATURE
+		jei-1.20.1-forge-15.2.0.21.jar                    |Just Enough Items             |jei                           |15.2.0.21           |DONE      |Manifest: NOSIGNATURE
+		appliedenergistics2-forge-15.2.13.jar             |Applied Energistics 2         |ae2                           |15.2.13             |DONE      |Manifest: NOSIGNATURE
+		ae2wtlib-15.2.3-forge.jar                         |AE2WTLib                      |ae2wtlib                      |15.2.3-forge        |DONE      |Manifest: NOSIGNATURE
+		createappliedkinetics-1.3.2-1.20.1.jar            |Create Applied Kinetics       |createappliedkinetics         |1.3.2-1.20.1        |DONE      |Manifest: NOSIGNATURE
+		Saros-Construction-Mod-1.20.1-1.6.2.jar           |Saro´s Construction Mod       |saros_construction_mod        |1.6.2               |DONE      |Manifest: NOSIGNATURE
+		create_copper_and_zinc-1.4.0-forge-1.20.1.jar     |Create: Copper & Zinc         |create_copper_and_zinc        |1.4.0               |DONE      |Manifest: NOSIGNATURE
+		createchunkloading-1.6.0-forge.jar                |Create Chunkloading           |createchunkloading            |1.6.0               |DONE      |Manifest: NOSIGNATURE
+		mcw-paintings-1.0.5-1.20.1forge.jar               |Macaw's Paintings             |mcwpaintings                  |1.0.5               |DONE      |Manifest: NOSIGNATURE
+		journeymap-1.20.1-5.10.1-forge.jar                |Journeymap                    |journeymap                    |5.10.1              |DONE      |Manifest: NOSIGNATURE
+		lukis-grand-capitals-1.0.jar                      |Luki's Grand Capitals         |mr_lukis_grandcapitals        |1.0                 |DONE      |Manifest: NOSIGNATURE
+		design_decor-0.4.0b-1.20.1.jar                    |Create: Design n' Decor       |design_decor                  |0.4.0b              |DONE      |Manifest: NOSIGNATURE
+		createbicbit-1.20.1-0.0.86.jar                    |Create Bitterballen           |create_bic_bit                |0.0.86              |DONE      |Manifest: NOSIGNATURE
+		Saros-Road-Signs-Mod-1.20.1-3.7.jar               |Saros Road signs mod          |saros_road_signs_mod          |3.7                 |DONE      |Manifest: NOSIGNATURE
+		Terralith_1.20.x_v2.5.4.jar                       |Terralith                     |terralith                     |2.5.4               |DONE      |Manifest: NOSIGNATURE
+		forge-1.20.1-47.3.6-universal.jar                 |Forge                         |forge                         |47.3.6              |DONE      |Manifest: 84:ce:76:e8:45:35:e4:0e:63:86:df:47:59:80:0f:67:6c:c1:5f:6e:5f:4d:b3:54:47:1a:9f:7f:ed:5e:f2:90
+		moderntrainparts-0.1.7-forge-mc1.20.1-cr0.5.1.f.ja|Modern Train Parts            |moderntrainparts              |0.1.7-forge-mc1.20.1|DONE      |Manifest: NOSIGNATURE
+		tfmg-0.9.1c-1.20.1.jar                            |Create: The Factory Must Grow |tfmg                          |0.9.1c-1.20.1       |DONE      |Manifest: NOSIGNATURE
+		mcw-paths-1.0.5-1.20.1forge.jar                   |Macaw's Paths and Pavings     |mcwpaths                      |1.0.5               |DONE      |Manifest: NOSIGNATURE
+		jukeboxfix-1.0.0-1.20.1.jar                       |Jukeboxfix                    |jukeboxfix                    |1.0.0+1.20.1        |DONE      |Manifest: NOSIGNATURE
+		tectonic-forge-1.19.3-2.3.5a.jar                  |Tectonic                      |tectonic                      |2.3.5a              |DONE      |Manifest: NOSIGNATURE
+		server-1.20.1-20230612.114412-srg.jar             |Minecraft                     |minecraft                     |1.20.1              |DONE      |Manifest: NOSIGNATURE
+		protection_pixel-1.0.5-forge-1.20.1.jar           |Protection Pixel              |protection_pixel              |1.0.5               |DONE      |Manifest: NOSIGNATURE
+		SimpleBackups-1.20.1-3.1.7.jar                    |Simple Backups                |simplebackups                 |1.20.1-3.1.7        |DONE      |Manifest: NOSIGNATURE
+		Dynmap-3.6-forge-1.20.jar                         |Dynmap                        |dynmap                        |3.6-899             |DONE      |Manifest: NOSIGNATURE
+		dragonlib-forge-1.20.1-2.1.14.jar                 |DragonLib                     |dragonlib                     |1.20.1-2.1.14       |DONE      |Manifest: NOSIGNATURE
+		moonlight-1.20-2.12.17-forge.jar                  |Moonlight Library             |moonlight                     |1.20-2.12.17        |DONE      |Manifest: NOSIGNATURE
+		fabric-api-base-0.4.31+ef105b4977.jar             |Fabric API Base               |fabric_api_base               |0.4.31+ef105b4977   |DONE      |Manifest: NOSIGNATURE
+		mixinsquared-forge-0.1.1.jar                      |MixinSquared                  |mixinsquared                  |0.1.1               |DONE      |Manifest: NOSIGNATURE
+		kffmod-4.11.0.jar                                 |Kotlin For Forge              |kotlinforforge                |4.11.0              |DONE      |Manifest: NOSIGNATURE
+		createstation_decor-0.1.1.1.20.1jar.jar           |Create:Station Decor          |createstation_decor           |0.1.1               |DONE      |Manifest: NOSIGNATURE
+		flywheel-forge-1.20.1-0.6.10-7.jar                |Flywheel                      |flywheel                      |0.6.10-7            |DONE      |Manifest: NOSIGNATURE
+		create-1.20.1-0.5.1.f.jar                         |Create                        |create                        |0.5.1.f             |DONE      |Manifest: NOSIGNATURE
+		createrailwaysnavigator-forge-1.20.1-0.5.5.jar    |Create Railways Navigator     |createrailwaysnavigator       |1.20.1-0.5.5        |DONE      |Manifest: NOSIGNATURE
+		ae2qolrecipes-forge-1.18.x-1.20.x-1.2.0.jar       |AE2 QoL Recipes               |ae2qolrecipes                 |1.2.0               |DONE      |Manifest: NOSIGNATURE
+		create_mixed_copper_tools-1.1.0 [Forge 1.20.1].jar|Create Mixed Copper Tools     |create_mixed_copper_tools     |1.1.0               |DONE      |Manifest: NOSIGNATURE
+		pattern_schematics-1.1.12+forge-1.20.1.jar        |Create: Pattern Schematics    |create_pattern_schematics     |1.1.12+forge-1.20.1 |DONE      |Manifest: NOSIGNATURE
+		automobility-0.4.2+1.20.1-forge.jar               |Automobility                  |automobility                  |0.4.2+1.20.1-forge  |DONE      |Manifest: NOSIGNATURE
+		fabric-object-builder-api-v1-11.1.3+2174fc8477.jar|Fabric Object Builder API (v1)|fabric_object_builder_api_v1  |11.1.3+2174fc8477   |DONE      |Manifest: NOSIGNATURE
+		create-track-map-1.4+mc1.20.1-neoforge.jar        |Create Track Map              |createtrackmap                |1.4                 |DONE      |Manifest: NOSIGNATURE
+		Saros-Road-Blocks-Mod-1.20.1-2.7.jar              |Saro´s Road Blocks Mod        |saros_road_blocks_mod         |2.7                 |DONE      |Manifest: NOSIGNATURE
+		valkyrienskies-120-2.3.0-beta.5.jar               |Valkyrien Skies 2             |valkyrienskies                |2.3.0-beta.5        |DONE      |Manifest: NOSIGNATURE
+		eureka-1201-1.5.1-beta.3.jar                      |VS Eureka Mod                 |vs_eureka                     |1.5.1-beta.3        |DONE      |Manifest: NOSIGNATURE
+		clockwork-1.20.1-0.1.16-forge-b3b22e39fe.jar      |Clockwork: Create x Valkyrien |vs_clockwork                  |1.20.1-0.1.16-forge-|DONE      |Manifest: NOSIGNATURE
+		cc_vs-1.20.1-forge-0.1.0.jar                      |CC: VS                        |cc_vs                         |1.20.1-forge-0.1.0  |DONE      |Manifest: NOSIGNATURE
+		DynmapBlockScan-3.6-forge-1.20.jar                |DynmapBlockScan               |dynmapblockscan               |3.6-251             |DONE      |Manifest: NOSIGNATURE
+		create_enchantment_industry-1.20.1-for-create-0.5.|Create Enchantment Industry   |create_enchantment_industry   |1.2.9.d             |DONE      |Manifest: NOSIGNATURE
+		create-dyn-light-forge1.20.1+1.0.1.jar            |Create Dynamic Light          |createdynlight                |1.0.1               |DONE      |Manifest: NOSIGNATURE
+	Crash Report UUID: 8e439a9f-b503-4304-a701-f1f67dab28f0
+	FML: 47.3
+	Forge: net.minecraftforge:47.3.6
