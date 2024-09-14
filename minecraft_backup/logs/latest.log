@@ -253,3 +253,10 @@
 [14Sep2024 13:21:15.265] [Server thread/INFO] [net.minecraft.server.network.ServerGamePacketListenerImpl/]: _PalaKing_ lost connection: Disconnected
 [14Sep2024 13:21:15.265] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: _PalaKing_ left the game
 [14Sep2024 13:21:15.266] [Server thread/INFO] [xaero.pac.OpenPartiesAndClaims/]: Updating all forceload tickets for 46e738b7-1f4c-490f-ae6e-1278693e3351
+[14Sep2024 19:37:12.424] [User Authenticator #7/INFO] [net.minecraft.server.network.ServerLoginPacketListenerImpl/]: UUID of player _PalaKing_ is 46e738b7-1f4c-490f-ae6e-1278693e3351
+[14Sep2024 19:37:26.905] [Server thread/INFO] [net.minecraft.server.players.PlayerList/]: _PalaKing_[/188.89.115.162:52913] logged in with entity id 1414341 at (-294.64596283750654, 63.875, -180.10311672519262)
+[14Sep2024 19:37:26.914] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: _PalaKing_ joined the game
+[14Sep2024 19:37:26.984] [Server thread/INFO] [xaero.pac.OpenPartiesAndClaims/]: Updating all forceload tickets for 46e738b7-1f4c-490f-ae6e-1278693e3351
+[14Sep2024 19:37:26.986] [Server thread/INFO] [Jade/]: Syncing config to _PalaKing_ (46e738b7-1f4c-490f-ae6e-1278693e3351)
+[14Sep2024 19:37:27.035] [Server thread/INFO] [de.melanx.simplebackups.SimpleBackups/]: Backup done.
+[14Sep2024 19:37:27.049] [SimpleBackups/INFO] [de.melanx.simplebackups.BackupThread/]: Successfully deleted "world_2024-09-12_05-24-10.zip"
