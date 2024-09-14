@@ -316,3 +316,5 @@
 [14Sep2024 20:24:43.217] [Server thread/ERROR] [VS2 Get Entities Mixin/]: java.lang.Exception: Collision box is too big! AABB[-2.8592115650000006E7, 95.0, -222.66189597833582] -> [-321.84048584921857, 122.50489257463617, 1.2290053650000006E7] returning empty list! this might break things
 [14Sep2024 20:24:48.228] [Server thread/ERROR] [VS2 Get Entities Mixin/]: java.lang.Exception: Collision box is too big! AABB[-2.8592115650000006E7, 95.0, -216.3353060773266] -> [-303.6862524371545, 122.47847970030695, 1.2290053650000006E7] returning empty list! this might break things
 [14Sep2024 20:24:53.269] [Server thread/ERROR] [VS2 Get Entities Mixin/]: java.lang.Exception: Collision box is too big! AABB[-2.8592115650000006E7, 95.0, -201.92540065199137] -> [-297.18382117524743, 122.47935048535504, 1.2290053650000006E7] returning empty list! this might break things
+[14Sep2024 20:30:39.370] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: [_PalaKing_: Set own game mode to Creative Mode]
+[14Sep2024 20:44:41.390] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: [_PalaKing_: Set own game mode to Survival Mode]
