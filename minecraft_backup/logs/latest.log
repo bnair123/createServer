@@ -318,3 +318,14 @@
 [14Sep2024 20:24:53.269] [Server thread/ERROR] [VS2 Get Entities Mixin/]: java.lang.Exception: Collision box is too big! AABB[-2.8592115650000006E7, 95.0, -201.92540065199137] -> [-297.18382117524743, 122.47935048535504, 1.2290053650000006E7] returning empty list! this might break things
 [14Sep2024 20:30:39.370] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: [_PalaKing_: Set own game mode to Creative Mode]
 [14Sep2024 20:44:41.390] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: [_PalaKing_: Set own game mode to Survival Mode]
+[14Sep2024 20:47:56.919] [Server thread/INFO] [net.minecraft.server.network.ServerGamePacketListenerImpl/]: _PalaKing_ lost connection: Disconnected
+[14Sep2024 20:47:56.919] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: _PalaKing_ left the game
+[14Sep2024 20:47:56.919] [Server thread/INFO] [xaero.pac.OpenPartiesAndClaims/]: Updating all forceload tickets for 46e738b7-1f4c-490f-ae6e-1278693e3351
+[14Sep2024 20:55:27.150] [User Authenticator #8/INFO] [net.minecraft.server.network.ServerLoginPacketListenerImpl/]: UUID of player _PalaKing_ is 46e738b7-1f4c-490f-ae6e-1278693e3351
+[14Sep2024 20:55:42.192] [Server thread/INFO] [net.minecraft.server.players.PlayerList/]: _PalaKing_[/188.89.115.162:53182] logged in with entity id 1458052 at (-298.1743668442542, 80.0, -281.3393191330862)
+[14Sep2024 20:55:42.206] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: _PalaKing_ joined the game
+[14Sep2024 20:55:42.233] [Server thread/INFO] [xaero.pac.OpenPartiesAndClaims/]: Updating all forceload tickets for 46e738b7-1f4c-490f-ae6e-1278693e3351
+[14Sep2024 20:55:42.234] [Server thread/INFO] [Jade/]: Syncing config to _PalaKing_ (46e738b7-1f4c-490f-ae6e-1278693e3351)
+[14Sep2024 20:57:41.875] [Server thread/INFO] [net.minecraft.server.network.ServerGamePacketListenerImpl/]: _PalaKing_ lost connection: Disconnected
+[14Sep2024 20:57:41.876] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: _PalaKing_ left the game
+[14Sep2024 20:57:41.876] [Server thread/INFO] [xaero.pac.OpenPartiesAndClaims/]: Updating all forceload tickets for 46e738b7-1f4c-490f-ae6e-1278693e3351
