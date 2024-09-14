@@ -260,3 +260,4 @@
 [14Sep2024 19:37:26.986] [Server thread/INFO] [Jade/]: Syncing config to _PalaKing_ (46e738b7-1f4c-490f-ae6e-1278693e3351)
 [14Sep2024 19:37:27.035] [Server thread/INFO] [de.melanx.simplebackups.SimpleBackups/]: Backup done.
 [14Sep2024 19:37:27.049] [SimpleBackups/INFO] [de.melanx.simplebackups.BackupThread/]: Successfully deleted "world_2024-09-12_05-24-10.zip"
+[14Sep2024 19:46:11.426] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: [_PalaKing_: Set own game mode to Creative Mode]
