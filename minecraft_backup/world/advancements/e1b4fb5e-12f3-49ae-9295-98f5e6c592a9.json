@@ -15069,27 +15069,21 @@
     },
     "done": true
   },
-  "create:steam_engine_maxed": {
-    "criteria": {
-      "0": "2024-09-13 15:00:46 +0200"
-    },
-    "done": true
-  },
   "create:arm_blaze_burner": {
     "criteria": {
       "0": "2024-09-13 14:53:25 +0200"
     },
     "done": true
   },
-  "immersive_paintings:misc/graffiti": {
+  "create:steam_engine_maxed": {
     "criteria": {
-      "has_item": "2024-09-13 15:12:35 +0200"
+      "0": "2024-09-13 15:00:46 +0200"
     },
     "done": true
   },
-  "iammusicplayer:recipes/misc/music_manager": {
+  "immersive_paintings:misc/graffiti": {
     "criteria": {
-      "has_diamond": "2024-09-13 15:55:44 +0200"
+      "has_item": "2024-09-13 15:12:35 +0200"
     },
     "done": true
   },
@@ -15105,9 +15099,75 @@
     },
     "done": true
   },
+  "iammusicplayer:recipes/misc/music_manager": {
+    "criteria": {
+      "has_diamond": "2024-09-13 15:55:44 +0200"
+    },
+    "done": true
+  },
   "create:linked_controller": {
     "criteria": {
       "0": "2024-09-13 15:56:16 +0200"
+    },
+    "done": true
+  },
+  "modulargolems:recipes/combat/barbaric_vanguard_shinguard": {
+    "criteria": {
+      "has_diamond": "2024-09-15 13:09:30 +0200"
+    },
+    "done": true
+  },
+  "modulargolems:recipes/combat/wind_spirit_shinguard": {
+    "criteria": {
+      "has_diamond": "2024-09-15 13:09:30 +0200"
+    },
+    "done": true
+  },
+  "modulargolems:recipes/misc/metal_golem_template": {
+    "criteria": {
+      "has_clay": "2024-09-15 13:09:30 +0200"
+    },
+    "done": true
+  },
+  "modulargolems:recipes/combat/wind_spirit_helmet": {
+    "criteria": {
+      "has_diamond": "2024-09-15 13:09:30 +0200"
+    },
+    "done": true
+  },
+  "modulargolems:recipes/combat/barbaric_vanguard_helmet": {
+    "criteria": {
+      "has_diamond": "2024-09-15 13:09:30 +0200"
+    },
+    "done": true
+  },
+  "modulargolems:recipes/combat/diamond_golem_axe": {
+    "criteria": {
+      "has_diamond": "2024-09-15 13:09:30 +0200"
+    },
+    "done": true
+  },
+  "modulargolems:recipes/combat/diamond_golem_spear": {
+    "criteria": {
+      "has_diamond": "2024-09-15 13:09:30 +0200"
+    },
+    "done": true
+  },
+  "modulargolems:recipes/combat/wind_spirit_chestplate": {
+    "criteria": {
+      "has_diamond": "2024-09-15 13:09:30 +0200"
+    },
+    "done": true
+  },
+  "modulargolems:recipes/combat/diamond_golem_sword": {
+    "criteria": {
+      "has_diamond": "2024-09-15 13:09:30 +0200"
+    },
+    "done": true
+  },
+  "modulargolems:recipes/combat/barbaric_vanguard_chestplate": {
+    "criteria": {
+      "has_diamond": "2024-09-15 13:09:30 +0200"
     },
     "done": true
   },
