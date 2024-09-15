@@ -1,108 +1,118 @@
 ---
---- Script to list added and removed items in the system with graphs
+--- Script to list item changes in the system with updates every minute
 --- Made for CCTweaked & Advanced Peripherals integration
 ---
 
-label = "Items in System"
+label = "Changed Items in System"
 
 me = peripheral.find("meBridge") -- MeBridge
 mon = peripheral.find("monitor") -- Monitor
 
--- Variables to store item changes
+-- Variables to store previous and changed items
 prevItems = {}
-addedItems = {}
-removedItems = {}
+changedItems = {}
 updateCycle = 1 -- 1 for list, 2 for graphs
 
--- Function to compare and track item changes
-function trackChanges()
+-- Function to compare and calculate item changes
+function calculateChanges()
     local currentItems = me.listItems()
-    local newAdded = {}
-    local newRemoved = {}
+    local currentMap = {}
+    changedItems = {}
 
     -- Create a map of current item quantities
-    local currentMap = {}
     for _, item in pairs(currentItems) do
         currentMap[item.name] = item.amount
     end
 
-    -- Check for added or removed items
+    -- Calculate changes by comparing with previous state
     for _, prevItem in pairs(prevItems) do
         if not currentMap[prevItem.name] then
-            -- Item was removed
-            newRemoved[prevItem.name] = prevItem.amount
-        elseif currentMap[prevItem.name] < prevItem.amount then
-            -- Item count decreased
-            newRemoved[prevItem.name] = prevItem.amount - currentMap[prevItem.name]
-        elseif currentMap[prevItem.name] > prevItem.amount then
-            -- Item count increased
-            newAdded[prevItem.name] = currentMap[prevItem.name] - prevItem.amount
+            -- Item was removed entirely
+            changedItems[prevItem.name] = -prevItem.amount
+        elseif currentMap[prevItem.name] ~= prevItem.amount then
+            -- Item count changed
+            changedItems[prevItem.name] = currentMap[prevItem.name] - prevItem.amount
         end
     end
 
     -- Check for newly added items
     for _, currentItem in pairs(currentItems) do
         if not prevItems[currentItem.name] then
-            newAdded[currentItem.name] = currentItem.amount
+            changedItems[currentItem.name] = currentItem.amount
         end
     end
 
-    addedItems = newAdded
-    removedItems = newRemoved
+    -- Update previous items for the next cycle
     prevItems = currentItems
 end
 
--- Function to display lists of added and removed items
-function displayLists()
-    row = 2
-    mon.clear()
-    CenterT("Items Added:", row, colors.black, colors.white, "left", false)
-    for item, count in pairs(addedItems) do
-        row = row + 1
-        CenterT(item .. " x" .. count, row, colors.black, colors.green, "left", false)
+-- Function to sort items by the most changed
+function sortChangedItems()
+    local sortedList = {}
+
+    -- Convert table into a sortable array
+    for itemName, change in pairs(changedItems) do
+        table.insert(sortedList, {name = itemName, amount = change})
     end
 
-    row = row + 2
-    CenterT("Items Removed:", row, colors.black, colors.white, "left", false)
-    for item, count in pairs(removedItems) do
+    -- Sort the array by the absolute value of the change
+    table.sort(sortedList, function(a, b)
+        return math.abs(a.amount) > math.abs(b.amount)
+    end)
+
+    return sortedList
+end
+
+-- Function to display the sorted list of changes
+function displayChangedItems()
+    row = 2
+    mon.clear()
+    CenterT("Item Changes (Sorted):", row, colors.black, colors.white, "left", false)
+
+    -- Sort the items by the most changed
+    local sortedItems = sortChangedItems()
+
+    -- Display the sorted items
+    for _, item in ipairs(sortedItems) do
         row = row + 1
-        CenterT(item .. " x" .. count, row, colors.black, colors.red, "left", false)
+        if item.amount > 0 then
+            CenterT(item.name .. " +" .. item.amount, row, colors.black, colors.green, "left", false) -- Added items in green
+        else
+            CenterT(item.name .. " " .. item.amount, row, colors.black, colors.red, "left", false) -- Removed items in red
+        end
     end
 end
 
--- Function to display graphs for total item count, added, and removed items
+-- Function to display graphs for total changes
 function displayGraphs()
-    local totalItems = 0
     local totalAdded = 0
     local totalRemoved = 0
 
-    -- Calculate total item count
-    local currentItems = me.listItems()
-    for _, item in pairs(currentItems) do
-        totalItems = totalItems + item.amount
-    end
-
-    -- Calculate total added and removed
-    for _, count in pairs(addedItems) do
-        totalAdded = totalAdded + count
-    end
-    for _, count in pairs(removedItems) do
-        totalRemoved = totalRemoved + count
+    -- Calculate totals
+    for _, change in pairs(changedItems) do
+        if change > 0 then
+            totalAdded = totalAdded + change
+        else
+            totalRemoved = totalRemoved - change -- Invert negative values for total removed
+        end
     end
 
     -- Draw the graphs
     row = 2
     mon.clear()
-    CenterT("Total Item Count: " .. totalItems, row, colors.black, colors.white, "left", false)
-    drawBarGraph(totalItems, 3)
-
-    row = row + 6
     CenterT("Total Items Added: " .. totalAdded, row, colors.black, colors.green, "left", false)
     drawBarGraph(totalAdded, row + 1)
 
     row = row + 6
     CenterT("Total Items Removed: " .. totalRemoved, row, colors.black, colors.red, "left", false)
     drawBarGraph(totalRemoved, row + 1)
+end
+
+-- Function to prepare the monitor
+function prepareMonitor()
+    mon.clear()
+    mon.setTextScale(0.5) -- Adjust text scale if necessary
+    CenterT(label, 1, colors.black, colors.white, "head", false)
 end
 
 -- Utility function to draw a simple bar graph
@@ -154,19 +164,19 @@ function clearBox(xMin, xMax, yMin, yMax)
     end
 end
 
--- Main loop to alternate between displaying lists and graphs
+-- Main loop to alternate between displaying changes and graphs
 function mainLoop()
     while true do
-        trackChanges()
+        calculateChanges() -- Update the list every minute
 
         if updateCycle == 1 then
-            displayLists()
+            displayChangedItems()
         else
             displayGraphs()
         end
 
         updateCycle = 3 - updateCycle -- Alternate between 1 and 2
-        sleep(60) -- Update every 60 seconds
+        sleep(10) -- Switch display every 10 seconds
     end
 end
 
