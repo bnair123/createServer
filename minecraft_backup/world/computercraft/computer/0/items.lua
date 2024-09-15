@@ -1,5 +1,5 @@
 ---
---- Script to list item changes in the system with updates every minute
+--- Script to list item changes in the system with updates every minute and persistent storage
 --- Made for CCTweaked & Advanced Peripherals integration
 ---
 
@@ -7,43 +7,73 @@ label = "Changed Items in System"
 
 me = peripheral.find("meBridge") -- MeBridge
 mon = peripheral.find("monitor") -- Monitor
+filename = "me_items.txt" -- File to store item data
 
 -- Variables to store previous and changed items
 prevItems = {}
 changedItems = {}
 updateCycle = 1 -- 1 for list, 2 for graphs
 
+-- Function to aggregate item quantities by name
+function aggregateItems(items)
+    local aggregated = {}
+    for _, item in pairs(items) do
+        if aggregated[item.name] then
+            aggregated[item.name] = aggregated[item.name] + item.amount
+        else
+            aggregated[item.name] = item.amount
+        end
+    end
+    return aggregated
+end
+
+-- Function to read previous items from a file
+function readPreviousItems()
+    local file = fs.open(filename, "r")
+    if file then
+        local contents = file.readAll()
+        prevItems = textutils.unserialize(contents) or {}
+        file.close()
+    else
+        prevItems = {} -- No previous file exists
+    end
+end
+
+-- Function to write current items to a file
+function writeCurrentItems(currentItems)
+    local file = fs.open(filename, "w")
+    if file then
+        file.write(textutils.serialize(currentItems))
+        file.close()
+    end
+end
+
 -- Function to compare and calculate item changes
 function calculateChanges()
     local currentItems = me.listItems()
-    local currentMap = {}
+    local currentMap = aggregateItems(currentItems) -- Aggregate by item name
     changedItems = {}
 
-    -- Create a map of current item quantities
-    for _, item in pairs(currentItems) do
-        currentMap[item.name] = item.amount
-    end
-
     -- Calculate changes by comparing with previous state
-    for _, prevItem in pairs(prevItems) do
-        if not currentMap[prevItem.name] then
+    for itemName, prevAmount in pairs(prevItems) do
+        if not currentMap[itemName] then
             -- Item was removed entirely
-            changedItems[prevItem.name] = -prevItem.amount
-        elseif currentMap[prevItem.name] ~= prevItem.amount then
+            changedItems[itemName] = -prevAmount
+        elseif currentMap[itemName] ~= prevAmount then
             -- Item count changed
-            changedItems[prevItem.name] = currentMap[prevItem.name] - prevItem.amount
+            changedItems[itemName] = currentMap[itemName] - prevAmount
         end
     end
 
     -- Check for newly added items
-    for _, currentItem in pairs(currentItems) do
-        if not prevItems[currentItem.name] then
-            changedItems[currentItem.name] = currentItem.amount
+    for itemName, currentAmount in pairs(currentMap) do
+        if not prevItems[itemName] then
+            changedItems[itemName] = currentAmount
         end
     end
 
-    -- Update previous items for the next cycle
-    prevItems = currentItems
+    -- Write current items to the file for future comparisons
+    writeCurrentItems(currentMap)
 end
 
 -- Function to sort items by the most changed
@@ -182,4 +212,5 @@ end
 
 -- Prepare monitor and start the main loop
 prepareMonitor()
+readPreviousItems() -- Load previous items from file at startup
 mainLoop()
