@@ -16739,6 +16739,12 @@
     },
     "done": true
   },
+  "create:water_wheel": {
+    "criteria": {
+      "0": "2024-09-15 01:58:42 +0200"
+    },
+    "done": true
+  },
   "railways:recipes/misc/crafting/smokestack_diesel": {
     "criteria": {
       "has_item": "2024-09-15 01:46:27 +0200"
