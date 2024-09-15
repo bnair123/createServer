@@ -15994,5 +15994,11 @@
     },
     "done": true
   },
+  "immersive_paintings:misc/graffiti": {
+    "criteria": {
+      "has_item": "2024-09-15 19:22:32 +0200"
+    },
+    "done": true
+  },
   "DataVersion": 3465
 }
