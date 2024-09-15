@@ -16733,9 +16733,57 @@
     },
     "done": true
   },
+  "railways:recipes/misc/crafting/smokestack_coalburner": {
+    "criteria": {
+      "has_item": "2024-09-15 01:46:27 +0200"
+    },
+    "done": true
+  },
+  "railways:recipes/misc/crafting/smokestack_diesel": {
+    "criteria": {
+      "has_item": "2024-09-15 01:46:27 +0200"
+    },
+    "done": true
+  },
+  "chunkloaders:recipes/misc/single_to_basic_chunk_loader": {
+    "criteria": {
+      "recipe_condition": "2024-09-15 01:45:01 +0200"
+    },
+    "done": true
+  },
+  "railways:recipes/misc/crafting/smokestack_woodburner": {
+    "criteria": {
+      "has_item": "2024-09-15 01:46:27 +0200"
+    },
+    "done": true
+  },
+  "railways:recipes/misc/crafting/smokestack_oilburner": {
+    "criteria": {
+      "has_item": "2024-09-15 01:46:27 +0200"
+    },
+    "done": true
+  },
   "create:haunted_bell": {
     "criteria": {
       "0": "2024-09-15 00:58:59 +0200"
+    },
+    "done": true
+  },
+  "railways:recipes/misc/crafting/smokestack_long": {
+    "criteria": {
+      "has_item": "2024-09-15 01:46:27 +0200"
+    },
+    "done": true
+  },
+  "railways:recipes/misc/crafting/smokestack_streamlined": {
+    "criteria": {
+      "has_item": "2024-09-15 01:46:27 +0200"
+    },
+    "done": true
+  },
+  "railways:recipes/misc/crafting/smokestack_caboosestyle": {
+    "criteria": {
+      "has_item": "2024-09-15 01:46:27 +0200"
     },
     "done": true
   },
