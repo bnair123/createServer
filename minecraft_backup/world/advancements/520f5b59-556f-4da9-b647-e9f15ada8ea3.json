@@ -16007,9 +16007,27 @@
     },
     "done": true
   },
+  "modulargolems:recipes/combat/netherite_golem_sword": {
+    "criteria": {
+      "has_netherite_ingot": "2024-09-16 21:21:52 +0200"
+    },
+    "done": true
+  },
+  "modulargolems:recipes/combat/netherite_golem_axe": {
+    "criteria": {
+      "has_netherite_ingot": "2024-09-16 21:21:52 +0200"
+    },
+    "done": true
+  },
   "createbigcannons:recipes/misc/impact_fuze": {
     "criteria": {
       "has_impact_fuze_head": "2024-09-16 20:47:33 +0200"
+    },
+    "done": true
+  },
+  "modulargolems:recipes/combat/netherite_golem_spear": {
+    "criteria": {
+      "has_netherite_ingot": "2024-09-16 21:21:52 +0200"
     },
     "done": true
   },
