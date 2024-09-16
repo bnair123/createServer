@@ -10,5 +10,11 @@
     "name": "CivNotSiv",
     "level": 4,
     "bypassesPlayerLimit": false
+  },
+  {
+    "uuid": "46e738b7-1f4c-490f-ae6e-1278693e3351",
+    "name": "_PalaKing_",
+    "level": 4,
+    "bypassesPlayerLimit": false
   }
 ]
