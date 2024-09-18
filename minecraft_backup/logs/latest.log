@@ -1,2 +1,323 @@
-[18Sep2024 06:41:02.493] [Netty Epoll Server IO #21/ERROR] [net.minecraftforge.network.NetworkRegistry/NETREGISTRY]: Channels [supplementaries:channel,protection_pixel:protection_pixel,l2itemselector:main,cfm:network,l2library:main,computercraft:network,table_top_craft:net,missilemod:missilemod,forge:tier_sorting,automobility:main,chunkloaders:main,estrogen:main,vs_clockwork:main,modulargolems:main,ic_ip:main,armourers_workshop:play,valkyrienskies:vs_packet,createarmory:createarmory,saros_road_blocks_mod:saros_road_blocks_mod,ritchiesprojectilelib:network,advancedperipherals:main_channel,create:main,geckolib:main,moonlight:channel,create_pattern_schematics:main,saros_road_signs_mod:saros_road_signs_mod,l2tabs:main,create_copper_and_zinc:create_copper_and_zinc,l2damagetracker:main,createbigcannons:network,saros_construction_mod:saros_construction_mod,fantasyfurniture:net,create_mixed_copper_tools:create_mixed_copper_tools,create_additions_synthetics:create_additions_synthetics,createstation_decor:createstation_decor,supermartijn642configlib:sync_configs,l2screentracker:main,tfmg:main,create_crafts_renewed:create_crafts_renewed,create_enchantment_industry:main,create_more_automation:create_more_automation,saros__money_mod:saros__money_mod,apexcore:main] rejected vanilla connections
-[18Sep2024 06:41:02.500] [Netty Epoll Server IO #21/INFO] [net.minecraftforge.server.ServerLifecycleHooks/SERVERHOOKS]: [/146.70.189.149:44462] Disconnecting VANILLA connection attempt: This server has mods that require Forge to be installed on the client. Contact your server admin for more details.
+[18Sep2024 15:07:15.895] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgeserver, --fml.forgeVersion, 47.3.6, --fml.mcVersion, 1.20.1, --fml.forgeGroup, net.minecraftforge, --fml.mcpVersion, 20230612.114412]
+[18Sep2024 15:07:15.900] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 10.0.9+10.0.9+main.dcd20f30 starting: java version 21.0.4 by Eclipse Adoptium; OS Linux arch amd64 version 6.1.106-Unraid
+[18Sep2024 15:07:17.740] [main/INFO] [net.minecraftforge.fml.loading.ImmediateWindowHandler/]: ImmediateWindowProvider not loading because launch target is forgeserver
+[18Sep2024 15:07:17.773] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.5 Source=union:/data/libraries/org/spongepowered/mixin/0.8.5/mixin-0.8.5.jar%2365!/ Service=ModLauncher Env=SERVER
+[18Sep2024 15:07:18.297] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file /data/libraries/net/minecraftforge/fmlcore/1.20.1-47.3.6/fmlcore-1.20.1-47.3.6.jar is missing mods.toml file
+[18Sep2024 15:07:18.300] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file /data/libraries/net/minecraftforge/javafmllanguage/1.20.1-47.3.6/javafmllanguage-1.20.1-47.3.6.jar is missing mods.toml file
+[18Sep2024 15:07:18.303] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file /data/libraries/net/minecraftforge/lowcodelanguage/1.20.1-47.3.6/lowcodelanguage-1.20.1-47.3.6.jar is missing mods.toml file
+[18Sep2024 15:07:18.306] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file /data/libraries/net/minecraftforge/mclanguage/1.20.1-47.3.6/mclanguage-1.20.1-47.3.6.jar is missing mods.toml file
+[18Sep2024 15:07:19.148] [main/WARN] [net.minecraftforge.jarjar.selection.JarSelector/]: Attempted to select two dependency jars from JarJar which have the same identification: Mod File:  and Mod File: . Using Mod File: 
+[18Sep2024 15:07:19.149] [main/WARN] [net.minecraftforge.jarjar.selection.JarSelector/]: Attempted to select a dependency jar for JarJar which was passed in as source: cloth_config. Using Mod File: /data/mods/cloth-config-11.1.118-forge.jar
+[18Sep2024 15:07:19.149] [main/WARN] [net.minecraftforge.jarjar.selection.JarSelector/]: Attempted to select a dependency jar for JarJar which was passed in as source: architectury. Using Mod File: /data/mods/architectury-9.2.14-forge.jar
+[18Sep2024 15:07:19.150] [main/INFO] [net.minecraftforge.fml.loading.moddiscovery.JarInJarDependencyLocator/]: Found 58 dependencies adding them to mods collection
+[18Sep2024 15:07:23.462] [main/INFO] [mixin/]: Compatibility level set to JAVA_17
+[18Sep2024 15:07:23.474] [main/ERROR] [mixin/]: Mixin config fabric-data-attachment-api-v1.mixins.json does not specify "minVersion" property
+[18Sep2024 15:07:23.475] [main/ERROR] [mixin/]: Mixin config fabric-data-attachment-api-v1.client.mixins.json does not specify "minVersion" property
+[18Sep2024 15:07:23.677] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgeserver' with arguments []
+[18Sep2024 15:07:23.683] [main/WARN] [mixin/]: Reference map 'createdeco-forge-refmap.json' for createdeco.mixins.json could not be read. If this is a development environment you can ignore this message
+[18Sep2024 15:07:23.797] [main/WARN] [mixin/]: Reference map 'interiors-forge-refmap.json' for interiors.mixins.json could not be read. If this is a development environment you can ignore this message
+[18Sep2024 15:07:23.810] [main/INFO] [Embeddium/]: Loaded configuration file for Embeddium: 171 options available, 0 override(s) found
+[18Sep2024 15:07:23.818] [main/WARN] [mixin/]: Reference map 'createmoredrillheads.refmap.json' for createmoredrillheads.mixins.json could not be read. If this is a development environment you can ignore this message
+[18Sep2024 15:07:23.821] [main/WARN] [mixin/]: Reference map 'suppsquared-common-refmap.json' for suppsquared-common.mixins.json could not be read. If this is a development environment you can ignore this message
+[18Sep2024 15:07:23.822] [main/WARN] [mixin/]: Reference map 'suppsquared-forge-refmap.json' for suppsquared.mixins.json could not be read. If this is a development environment you can ignore this message
+[18Sep2024 15:07:23.825] [main/WARN] [mixin/]: Reference map 'CreateLiquidFuel.refmap.json' for createliquidfuel.mixins.json could not be read. If this is a development environment you can ignore this message
+[18Sep2024 15:07:23.835] [main/WARN] [mixin/]: Reference map 'create_deepslate_processing-common-refmap.json' for create_deepslate_processing.common.mixins.json could not be read. If this is a development environment you can ignore this message
+[18Sep2024 15:07:23.840] [main/WARN] [mixin/]: Reference map 'trainutilities-common-common-refmap.json' for trainutilities.mixins.json could not be read. If this is a development environment you can ignore this message
+[18Sep2024 15:07:23.848] [main/WARN] [mixin/]: Reference map 'tfmg.refmap.json' for design_decor.mixins.json could not be read. If this is a development environment you can ignore this message
+[18Sep2024 15:07:23.851] [main/WARN] [mixin/]: Reference map 'tfmg.refmap.json' for tfmg.mixins.json could not be read. If this is a development environment you can ignore this message
+[18Sep2024 15:07:23.869] [main/WARN] [mixin/]: Reference map 'createappliedkinetics.refmap.json' for createappliedkinetics.mixins.json could not be read. If this is a development environment you can ignore this message
+[18Sep2024 15:07:23.877] [main/WARN] [mixin/]: Reference map 'immersive_paintings-common-refmap.json' for immersive_paintings.mixin.json could not be read. If this is a development environment you can ignore this message
+[18Sep2024 15:07:23.885] [main/WARN] [mixin/]: Reference map 'apexcore.refmap.json' for apexcore.mixins.json could not be read. If this is a development environment you can ignore this message
+[18Sep2024 15:07:23.900] [main/INFO] [Puzzles Lib/]: Loading 125 mods:
+	- accessories 1.0.0-beta30+1.20.1
+		|-- fabric_api_base 0.4.31+ef105b4977
+		|-- fabric_data_attachment_api_v1 1.0.0+30ef839e77
+		|-- fabric_entity_events_v1 1.6.0+6274ab9d77
+		\-- fabric_object_builder_api_v1 11.1.3+2174fc8477
+	- advancedperipherals 0.7.40r
+	- ae2 15.2.13
+	- ae2qolrecipes 1.2.0
+	- ae2wtlib 15.2.3-forge
+	- architectury 9.2.14
+	- armourers_workshop 3.0.0-beta.14
+	- automobility 0.4.2+1.20.1-forge
+	- bellsandwhistles 0.4.3-1.20.x
+	- botarium 2.3.4
+	- cc_vs 1.20.1-forge-0.1.0
+	- cccbridge 1.6.3-forge
+	- cfm 7.0.0-pre36
+	- chat_heads 0.12.13
+	- chunkloaders 1.2.5
+	- cloth_config 11.1.118
+	- collective 7.84
+	- computercraft 1.113.0
+	- copycats 2.1.2+mc.1.20.1-forge
+	- create 0.5.1.f
+		\-- flywheel 0.6.10-7
+	- create_additions_synthetics 3.2.1
+	- create_bic_bit 0.0.86
+	- create_copper_and_zinc 1.4.0
+	- create_crafts_renewed 1.9.2
+	- create_deepfried 0.1.1
+	- create_deepslate_processing 2.0.1
+	- create_enchantment_industry 1.2.9.d
+		\-- create_dragon_lib 1.4.3
+	- create_mixed_copper_tools 1.1.0
+	- create_more_automation 0.3.0
+	- create_oxidized 0.1.1
+	- create_pattern_schematics 1.1.12+forge-1.20.1
+	- createappliedkinetics 1.3.2-1.20.1
+	- createarmory 0.5
+	- createbigcannons 5.5.1+mc.1.20.1-forge
+		\-- ritchiesprojectilelib 2.0.0-dev+mc.1.20.1-forge-build.182
+	- createcafe 1.2.4-1.20.1
+	- createchunkloading 1.6.0
+	- createdeco 2.0.2-1.20.1-forge
+	- createdieselgenerators 1.20.1-1.2i
+	- createdynlight 1.0.1
+	- createliquidfuel 2.1.1-1.20.1
+	- createmoredrillheads 2.0.3-1.20.1
+	- createrailwaysnavigator 1.20.1-0.5.5
+		\-- dragonlib 1.20.1-2.1.14
+	- createstation_decor 0.1.1
+	- createtrackmap 1.4
+	- cupboard 1.20.1-2.7
+	- curios 7.4.0+1.20.1
+		\-- cclayer 0.beta.11
+	- design_decor 0.4.0b
+	- embeddium 0.3.30+mc1.20.1
+		\-- rubidium 0.7.1
+	- estrogen 4.2.10+1.20.1-forge
+		|-- baubly 1.0.1
+		\-- jukeboxfix 1.0.0+1.20.1
+	- fantasyfurniture 9.0.0
+		|-- apexcore 10.0.0
+		\-- commonality 7.0.0
+	- forge 47.3.6
+	- geckolib 4.4.7
+	- iammusicplayer 3.22.0-alpha.5
+	- immersive_paintings 0.6.7+1.20.1
+	- interiors 0.5.4+forge-mc1.20.1
+	- jade 11.10.1+forge
+	- jadeaddons 5.2.2
+	- jei 15.2.0.21
+	- kotlinforforge 4.11.0
+	- l2library 2.4.28
+		|-- l2itemselector 0.1.9
+		|-- l2screentracker 0.1.4
+		|-- l2tabs 0.3.3
+		\-- mixinextras 0.2.0-beta.8
+	- mcwbridges 3.0.0
+	- mcwdoors 1.1.1
+	- mcwfences 1.1.2
+	- mcwfurnitures 3.3.0
+	- mcwlights 1.1.0
+	- mcwpaintings 1.0.5
+	- mcwpaths 1.0.5
+	- mcwtrpdoors 1.1.3
+	- mcwwindows 2.3.0
+	- megacells 2.4.4-1.20.1
+	- minecraft 1.20.1
+	- missilemod 1.0.0
+	- moderntrainparts 0.1.7-forge-mc1.20.1-cr0.5.1.f
+	- modulargolems 2.4.39
+		\-- l2damagetracker 0.3.7
+	- moonlight 1.20-2.12.17
+	- mr_lukis_grandcapitals 1.0
+	- numismatics 1.0.6+forge-mc1.20.1
+	- openpartiesandclaims 0.23.2
+	- otyacraftengine 3.7.0-alpha.2
+	- packetfixer 1.4.2
+	- pickupnotifier 8.0.0
+	- protection_pixel 1.0.5
+	- puzzleslib 8.1.23
+		\-- puzzlesaccessapi 8.0.7
+	- railways 1.6.4+forge-mc1.20.1
+	- resourcefullib 2.1.29
+	- saros__money_mod 3.0
+	- saros_construction_mod 1.6.2
+	- saros_road_blocks_mod 2.7
+	- saros_road_signs_mod 3.7
+	- simplebackups 1.20.1-3.1.7
+	- smoothchunk 1.20.1-3.6
+	- supermartijn642configlib 1.1.8
+	- supermartijn642corelib 1.1.17
+	- supplementaries 1.20-2.8.17
+		\-- mixinsquared 0.1.1
+	- suppsquared 1.20-1.1.14
+	- table_top_craft 1.20.1-6.1.2
+	- tectonic 2.3.5a
+	- terralith 2.5.4
+	- tfmg 0.9.1c-1.20.1
+	- trainutilities 2.2.0
+	- treeharvester 9.1
+	- valkyrienskies 2.3.0-beta.5
+	- vs_clockwork 1.20.1-0.1.16-forge-b3b22e39fe
+	- vs_eureka 1.5.1-beta.3
+	- xaerominimap 24.2.0
+	- xaeroworldmap 1.38.8
+[18Sep2024 15:07:23.902] [main/WARN] [mixin/]: Reference map 'itemselector.refmap.json' for l2itemselector.mixins.json could not be read. If this is a development environment you can ignore this message
+[18Sep2024 15:07:23.908] [main/WARN] [mixin/]: Reference map 'eureka-1201-forge-refmap.json' for vs_eureka.mixins.json could not be read. If this is a development environment you can ignore this message
+[18Sep2024 15:07:23.912] [main/WARN] [mixin/]: Reference map 'cc_vs-forge-refmap.json' for cc_vs.mixins.json could not be read. If this is a development environment you can ignore this message
+[18Sep2024 15:07:23.927] [main/WARN] [mixin/]: Reference map 'packetfixer-forge-forge-refmap.json' for packetfixer-forge.mixins.json could not be read. If this is a development environment you can ignore this message
+[18Sep2024 15:07:24.896] [main/WARN] [mixin/]: Error loading class: com/aetherteam/aether/inventory/menu/AccessoriesMenu (java.lang.ClassNotFoundException: com.aetherteam.aether.inventory.menu.AccessoriesMenu)
+[18Sep2024 15:07:24.940] [main/ERROR] [net.minecraftforge.fml.loading.RuntimeDistCleaner/DISTXFORM]: Attempted to load class net/minecraft/client/renderer/LevelRenderer for invalid dist DEDICATED_SERVER
+[18Sep2024 15:07:24.941] [main/WARN] [mixin/]: Error loading class: net/minecraft/client/renderer/LevelRenderer (java.lang.RuntimeException: Attempted to load class net/minecraft/client/renderer/LevelRenderer for invalid dist DEDICATED_SERVER)
+[18Sep2024 15:07:24.941] [main/WARN] [mixin/]: @Mixin target net.minecraft.client.renderer.LevelRenderer was not found accessories-common.mixins.json:LevelRendererAccessor
+[18Sep2024 15:07:25.073] [main/WARN] [mixin/]: Error loading class: xfacthd/framedblocks/common/blockentity/doubled/FramedAdjustableDoubleBlockEntity (java.lang.ClassNotFoundException: xfacthd.framedblocks.common.blockentity.doubled.FramedAdjustableDoubleBlockEntity)
+[18Sep2024 15:07:25.074] [main/WARN] [mixin/]: @Mixin target xfacthd.framedblocks.common.blockentity.doubled.FramedAdjustableDoubleBlockEntity was not found createbigcannons.mixins.json:compat.FramedAdjustableDoubleBlockEntityAccessor
+[18Sep2024 15:07:25.086] [main/WARN] [mixin/]: Error loading class: com/firemerald/additionalplacements/common/ConfigCommon (java.lang.ClassNotFoundException: com.firemerald.additionalplacements.common.ConfigCommon)
+[18Sep2024 15:07:25.087] [main/WARN] [mixin/]: Error loading class: com/firemerald/additionalplacements/block/AdditionalPlacementBlock (java.lang.ClassNotFoundException: com.firemerald.additionalplacements.block.AdditionalPlacementBlock)
+[18Sep2024 15:07:25.087] [main/WARN] [mixin/]: @Mixin target com.firemerald.additionalplacements.block.AdditionalPlacementBlock was not found copycats-common.mixins.json:compat.additionalplacements.PlacementBlockMixin
+[18Sep2024 15:07:25.097] [main/WARN] [mixin/]: Error loading class: me/jellysquid/mods/lithium/common/ai/pathing/PathNodeDefaults (java.lang.ClassNotFoundException: me.jellysquid.mods.lithium.common.ai.pathing.PathNodeDefaults)
+[18Sep2024 15:07:25.111] [main/WARN] [mixin/]: Error loading class: cjminecraft/doubleslabs/common/config/DSConfig$Common (java.lang.ClassNotFoundException: cjminecraft.doubleslabs.common.config.DSConfig$Common)
+[18Sep2024 15:07:25.443] [main/WARN] [mixin/]: Error loading class: com/jamieswhiteshirt/reachentityattributes/ReachEntityAttributes (java.lang.ClassNotFoundException: com.jamieswhiteshirt.reachentityattributes.ReachEntityAttributes)
+[18Sep2024 15:07:25.466] [main/WARN] [mixin/]: Error loading class: blusunrize/immersiveengineering/common/gui/BlockEntityInventory (java.lang.ClassNotFoundException: blusunrize.immersiveengineering.common.gui.BlockEntityInventory)
+[18Sep2024 15:07:25.467] [main/WARN] [mixin/]: Error loading class: net/dries007/tfc/world/TFCChunkGenerator (java.lang.ClassNotFoundException: net.dries007.tfc.world.TFCChunkGenerator)
+[18Sep2024 15:07:25.468] [main/WARN] [mixin/]: Error loading class: cofh/core/block/entity/TileCoFH (java.lang.ClassNotFoundException: cofh.core.block.entity.TileCoFH)
+[18Sep2024 15:07:25.468] [main/WARN] [mixin/]: Error loading class: li/cil/tis3d/common/entity/InfraredPacketEntity (java.lang.ClassNotFoundException: li.cil.tis3d.common.entity.InfraredPacketEntity)
+[18Sep2024 15:07:25.469] [main/WARN] [mixin/]: Error loading class: me/desht/modularrouters/container/RouterMenu (java.lang.ClassNotFoundException: me.desht.modularrouters.container.RouterMenu)
+[18Sep2024 15:07:25.613] [main/WARN] [mixin/]: Error loading class: com/firemerald/additionalplacements/block/AdditionalPlacementBlock (java.lang.ClassNotFoundException: com.firemerald.additionalplacements.block.AdditionalPlacementBlock)
+[18Sep2024 15:07:25.614] [main/WARN] [mixin/]: Error loading class: com/firemerald/additionalplacements/block/AdditionalPlacementBlock (java.lang.ClassNotFoundException: com.firemerald.additionalplacements.block.AdditionalPlacementBlock)
+[18Sep2024 15:07:25.703] [main/ERROR] [mixin/]: valkyrienskies-common.mixins.json:feature.container_distance_check.MixinContainer: Interface mixin contains a non-public method! Found includeShipsInDistanceCheck(Lnet/minecraft/world/entity/player/Player;DDD)D in valkyrienskies-common.mixins.json:feature.container_distance_check.MixinContainer
+org.spongepowered.asm.mixin.transformer.throwables.InvalidInterfaceMixinException: Interface mixin contains a non-public method! Found includeShipsInDistanceCheck(Lnet/minecraft/world/entity/player/Player;DDD)D in valkyrienskies-common.mixins.json:feature.container_distance_check.MixinContainer
+	at org.spongepowered.asm.mixin.transformer.MixinPreProcessorInterface.prepareMethod(MixinPreProcessorInterface.java:65) ~[mixin-0.8.5.jar%2365!/:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4]
+	at org.spongepowered.asm.mixin.transformer.MixinPreProcessorStandard.prepare(MixinPreProcessorStandard.java:187) ~[mixin-0.8.5.jar%2365!/:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4]
+	at org.spongepowered.asm.mixin.transformer.MixinInfo$State.validate(MixinInfo.java:322) ~[mixin-0.8.5.jar%2365!/:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4]
+	at org.spongepowered.asm.mixin.transformer.MixinInfo.validate(MixinInfo.java:913) ~[mixin-0.8.5.jar%2365!/:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4]
+	at org.spongepowered.asm.mixin.transformer.MixinConfig.postInitialise(MixinConfig.java:801) ~[mixin-0.8.5.jar%2365!/:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4]
+	at org.spongepowered.asm.mixin.transformer.MixinProcessor.prepareConfigs(MixinProcessor.java:567) ~[mixin-0.8.5.jar%2365!/:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4]
+	at org.spongepowered.asm.mixin.transformer.MixinProcessor.select(MixinProcessor.java:462) ~[mixin-0.8.5.jar%2365!/:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4]
+	at org.spongepowered.asm.mixin.transformer.MixinProcessor.checkSelect(MixinProcessor.java:438) ~[mixin-0.8.5.jar%2365!/:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4]
+	at org.spongepowered.asm.mixin.transformer.MixinProcessor.applyMixins(MixinProcessor.java:290) ~[mixin-0.8.5.jar%2365!/:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4]
+	at org.spongepowered.asm.mixin.transformer.MixinTransformer.transformClass(MixinTransformer.java:250) ~[mixin-0.8.5.jar%2365!/:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4]
+	at org.spongepowered.asm.service.modlauncher.MixinTransformationHandler.processClass(MixinTransformationHandler.java:131) ~[mixin-0.8.5.jar%2365!/:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4]
+	at org.spongepowered.asm.launch.MixinLaunchPluginLegacy.processClass(MixinLaunchPluginLegacy.java:131) ~[mixin-0.8.5.jar%2365!/:0.8.5+Jenkins-b310.git-155314e6e91465dad727e621a569906a410cd6f4]
+	at cpw.mods.modlauncher.serviceapi.ILaunchPluginService.processClassWithFlags(ILaunchPluginService.java:156) ~[modlauncher-10.0.9.jar%2355!/:10.0.9+10.0.9+main.dcd20f30]
+	at cpw.mods.modlauncher.LaunchPluginHandler.offerClassNodeToPlugins(LaunchPluginHandler.java:88) ~[modlauncher-10.0.9.jar%2355!/:?]
+	at cpw.mods.modlauncher.ClassTransformer.transform(ClassTransformer.java:120) ~[modlauncher-10.0.9.jar%2355!/:?]
+	at cpw.mods.modlauncher.TransformingClassLoader.maybeTransformClassBytes(TransformingClassLoader.java:50) ~[modlauncher-10.0.9.jar%2355!/:?]
+	at cpw.mods.cl.ModuleClassLoader.readerToClass(ModuleClassLoader.java:113) ~[securejarhandler-2.1.10.jar:?]
+	at cpw.mods.cl.ModuleClassLoader.lambda$findClass$15(ModuleClassLoader.java:219) ~[securejarhandler-2.1.10.jar:?]
+	at cpw.mods.cl.ModuleClassLoader.loadFromModule(ModuleClassLoader.java:229) ~[securejarhandler-2.1.10.jar:?]
+	at cpw.mods.cl.ModuleClassLoader.findClass(ModuleClassLoader.java:219) ~[securejarhandler-2.1.10.jar:?]
+	at java.lang.ClassLoader.loadClass(Unknown Source) ~[?:?]
+	at java.lang.Class.forName(Unknown Source) ~[?:?]
+	at java.lang.Class.forName(Unknown Source) ~[?:?]
+	at net.minecraftforge.fml.loading.ImmediateWindowHandler$DummyProvider.lambda$updateModuleReads$1(ImmediateWindowHandler.java:145) ~[fmlloader-1.20.1-47.3.6.jar%2369!/:1.0]
+	at java.util.Optional.map(Unknown Source) ~[?:?]
+	at net.minecraftforge.fml.loading.ImmediateWindowHandler$DummyProvider.updateModuleReads(ImmediateWindowHandler.java:145) ~[fmlloader-1.20.1-47.3.6.jar%2369!/:1.0]
+	at net.minecraftforge.fml.loading.ImmediateWindowHandler.acceptGameLayer(ImmediateWindowHandler.java:71) ~[fmlloader-1.20.1-47.3.6.jar%2369!/:1.0]
+	at net.minecraftforge.fml.loading.FMLLoader.beforeStart(FMLLoader.java:207) ~[fmlloader-1.20.1-47.3.6.jar%2369!/:1.0]
+	at net.minecraftforge.fml.loading.targets.CommonLaunchHandler.launchService(CommonLaunchHandler.java:92) ~[fmlloader-1.20.1-47.3.6.jar%2369!/:?]
+	at cpw.mods.modlauncher.LaunchServiceHandlerDecorator.launch(LaunchServiceHandlerDecorator.java:30) ~[modlauncher-10.0.9.jar%2355!/:?]
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:53) ~[modlauncher-10.0.9.jar%2355!/:?]
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:71) ~[modlauncher-10.0.9.jar%2355!/:?]
+	at cpw.mods.modlauncher.Launcher.run(Launcher.java:108) ~[modlauncher-10.0.9.jar%2355!/:?]
+	at cpw.mods.modlauncher.Launcher.main(Launcher.java:78) ~[modlauncher-10.0.9.jar%2355!/:?]
+	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) ~[modlauncher-10.0.9.jar%2355!/:?]
+	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) ~[modlauncher-10.0.9.jar%2355!/:?]
+	at cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:141) ~[bootstraplauncher-1.1.2.jar:?]
+[18Sep2024 15:07:25.726] [main/INFO] [MixinExtras|Service/]: Initializing MixinExtras via com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.4.1).
+[18Sep2024 15:07:27.025] [main/WARN] [mixin/]: Error loading class: com/firemerald/additionalplacements/block/AdditionalPlacementBlock (java.lang.ClassNotFoundException: com.firemerald.additionalplacements.block.AdditionalPlacementBlock)
+[18Sep2024 15:07:27.038] [main/WARN] [mixin/]: Error loading class: com/firemerald/additionalplacements/block/AdditionalPlacementBlock (java.lang.ClassNotFoundException: com.firemerald.additionalplacements.block.AdditionalPlacementBlock)
+[18Sep2024 15:07:27.091] [main/WARN] [mixin/]: Error loading class: com/firemerald/additionalplacements/block/AdditionalPlacementBlock (java.lang.ClassNotFoundException: com.firemerald.additionalplacements.block.AdditionalPlacementBlock)
+[18Sep2024 15:07:27.098] [main/WARN] [mixin/]: Error loading class: com/firemerald/additionalplacements/block/AdditionalPlacementBlock (java.lang.ClassNotFoundException: com.firemerald.additionalplacements.block.AdditionalPlacementBlock)
+[18Sep2024 15:07:27.101] [main/WARN] [mixin/]: Error loading class: com/firemerald/additionalplacements/block/AdditionalPlacementBlock (java.lang.ClassNotFoundException: com.firemerald.additionalplacements.block.AdditionalPlacementBlock)
+[18Sep2024 15:07:28.430] [main/WARN] [mixin/]: @Inject(@At("INVOKE")) Shift.BY=2 on accessories-common.mixins.json:NbtCompoundMixin::handler$zjo000$adjustCheckForListVariants exceeds the maximum allowed value: 0. Increase the value of maxShiftBy to suppress this warning.
+[18Sep2024 15:07:30.663] [modloading-worker-0/INFO] [Advanced Peripherals/]: AdvancedPeripherals says hello!
+[18Sep2024 15:07:30.667] [modloading-worker-0/INFO] [plus.dragons.createdragonlib.DragonLib/]: Create: Dragon Lib 1.4.3 has initialized, ready to support your Create add-ons!
+[18Sep2024 15:07:30.709] [modloading-worker-0/INFO] [Create: Interiors/]: Create: Interiors v0.5.4+forge-mc1.20.1 initializing! Create version: 0.5.1f on platform: Forge
+[18Sep2024 15:07:30.721] [modloading-worker-0/INFO] [Create: Numismatics/]: Create: Numismatics 1.0.6+forge-mc1.20.1 initializing! Create version: 0.5.1f on platform: FORGE
+[18Sep2024 15:07:30.722] [modloading-worker-0/INFO] [Create Deco/]: Registering items for Create Deco
+[18Sep2024 15:07:30.758] [modloading-worker-0/INFO] [Puzzles Lib/]: Constructing common components for pickupnotifier:main
+[18Sep2024 15:07:30.863] [modloading-worker-0/INFO] [Create: Numismatics/]: Registering items for Create: Numismatics
+[18Sep2024 15:07:30.873] [modloading-worker-0/INFO] [Collective/]: Loading Collective version 7.84.
+[18Sep2024 15:07:30.876] [modloading-worker-0/INFO] [Create Deco/]: Registering blocks for Create Deco
+[18Sep2024 15:07:31.030] [modloading-worker-0/INFO] [Advanced Peripherals/]: powah not loaded, skip integration loading
+[18Sep2024 15:07:31.038] [modloading-worker-0/WARN] [Advanced Peripherals/]: Failed to load integration for powah
+[18Sep2024 15:07:31.039] [modloading-worker-0/WARN] [Advanced Peripherals/]: Successfully loaded integration for create
+[18Sep2024 15:07:31.046] [modloading-worker-0/INFO] [Advanced Peripherals/]: mekanism not loaded, skip integration loading
+[18Sep2024 15:07:31.047] [modloading-worker-0/WARN] [Advanced Peripherals/]: Failed to load integration for mekanism
+[18Sep2024 15:07:31.053] [modloading-worker-0/INFO] [Advanced Peripherals/]: botania not loaded, skip integration loading
+[18Sep2024 15:07:31.053] [modloading-worker-0/WARN] [Advanced Peripherals/]: Failed to load integration for botania
+[18Sep2024 15:07:31.088] [modloading-worker-0/INFO] [com.cupboard.Cupboard/]: Loaded config for: cupboard.json
+[18Sep2024 15:07:31.173] [modloading-worker-0/INFO] [Create: Numismatics/]: Registering blocks for Create: Numismatics
+[18Sep2024 15:07:31.252] [modloading-worker-0/INFO] [Create: Deepslate Processing/]: Create: Deepslate Processing initializing! Create version: 0.5.1f
+[18Sep2024 15:07:31.355] [modloading-worker-0/INFO] [dev.architectury.networking.forge.NetworkManagerImpl/]: Registering C2S receiver with id architectury:sync_ids
+[18Sep2024 15:07:31.361] [modloading-worker-0/INFO] [dev.architectury.networking.forge.NetworkManagerImpl/]: Registering C2S receiver with id otyacraftengine:block_entity_instruction
+[18Sep2024 15:07:31.361] [modloading-worker-0/INFO] [dev.architectury.networking.forge.NetworkManagerImpl/]: Registering C2S receiver with id iammusicplayer:music_sync
+[18Sep2024 15:07:31.363] [modloading-worker-0/INFO] [dev.architectury.networking.forge.NetworkManagerImpl/]: Registering C2S receiver with id iammusicplayer:music_playlist_add
+[18Sep2024 15:07:31.364] [modloading-worker-0/INFO] [dev.architectury.networking.forge.NetworkManagerImpl/]: Registering C2S receiver with id otyacraftengine:item_instruction
+[18Sep2024 15:07:31.365] [modloading-worker-0/INFO] [dev.architectury.networking.forge.NetworkManagerImpl/]: Registering C2S receiver with id iammusicplayer:music_playlist_edit
+[18Sep2024 15:07:31.379] [modloading-worker-0/INFO] [dev.architectury.networking.forge.NetworkManagerImpl/]: Registering C2S receiver with id iammusicplayer:music_playlist_change_authority
+[18Sep2024 15:07:31.381] [modloading-worker-0/INFO] [dev.architectury.networking.forge.NetworkManagerImpl/]: Registering C2S receiver with id iammusicplayer:music_add
+[18Sep2024 15:07:31.387] [modloading-worker-0/INFO] [dev.architectury.networking.forge.NetworkManagerImpl/]: Registering C2S receiver with id iammusicplayer:music_edit
+[18Sep2024 15:07:31.389] [modloading-worker-0/INFO] [dev.architectury.networking.forge.NetworkManagerImpl/]: Registering C2S receiver with id iammusicplayer:music_ring_ready_result
+[18Sep2024 15:07:31.390] [modloading-worker-0/INFO] [dev.architectury.networking.forge.NetworkManagerImpl/]: Registering C2S receiver with id iammusicplayer:music_ring_update_result
+[18Sep2024 15:07:31.391] [modloading-worker-0/INFO] [dev.architectury.networking.forge.NetworkManagerImpl/]: Registering C2S receiver with id iammusicplayer:music_or_playlist_delete
+[18Sep2024 15:07:31.392] [modloading-worker-0/INFO] [dev.architectury.networking.forge.NetworkManagerImpl/]: Registering C2S receiver with id iammusicplayer:multiple_music_add
+[18Sep2024 15:07:31.392] [modloading-worker-0/INFO] [dev.architectury.networking.forge.NetworkManagerImpl/]: Registering C2S receiver with id iammusicplayer:hand_lid_cycle
+[18Sep2024 15:07:31.647] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 47.3.6, for MC 1.20.1 with MCP 20230612.114412
+[18Sep2024 15:07:31.649] [modloading-worker-0/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v47.3.6 Initialized
+[18Sep2024 15:07:31.728] [modloading-worker-0/INFO] [Estrogen/]: Injecting Estrogen into your veins!
+[18Sep2024 15:07:31.764] [modloading-worker-0/INFO] [xyz.apex.forge.commonality.Mods.CommonalityMod/]: Running Minecraft '1.20.1', & Forge '47.3.6' on Java '21.0.4, Eclipse Adoptium'
+[18Sep2024 15:07:31.767] [modloading-worker-0/INFO] [dev.architectury.networking.forge.NetworkManagerImpl/]: Registering C2S receiver with id dragonlib:dragonlib_network/69a65f20acde32448da097b16eacfce9
+[18Sep2024 15:07:31.770] [modloading-worker-0/INFO] [dev.architectury.networking.forge.NetworkManagerImpl/]: Registering C2S receiver with id dragonlib:dragonlib_network/69d73e101ecb38b59cc59ce369f9f0e6
+[18Sep2024 15:07:31.780] [modloading-worker-0/INFO] [TrustedSourceList/]: Loading BlackListed sources from remote... (https://api.stopmodreposts.org/minecraft/sites.txt)
+[18Sep2024 15:07:31.789] [Toothless/INFO] [DragonLib/]:                            +++ 🐉 +++                             
+[18Sep2024 15:07:31.795] [Toothless/INFO] [DragonLib/]: ------------------------------------------------------------------
+[18Sep2024 15:07:31.795] [Toothless/INFO] [DragonLib/]:                   Loaded DRAGONLIB by MRJULSEN!                   
+[18Sep2024 15:07:31.796] [Toothless/INFO] [DragonLib/]:                       Minecraft Forge 1.20.1                      
+[18Sep2024 15:07:31.796] [Toothless/INFO] [DragonLib/]:              Discord: https://discord.gg/AeSbNgvc7f               
+[18Sep2024 15:07:31.796] [Toothless/INFO] [DragonLib/]:       GitHub: https://github.com/MisterJulsen/MC-DragonLib2       
+[18Sep2024 15:07:31.797] [Toothless/INFO] [DragonLib/]:  Bug Reports: https://github.com/MisterJulsen/MC-DragonLib2/issues
+[18Sep2024 15:07:31.798] [Toothless/INFO] [DragonLib/]: ------------------------------------------------------------------
+[18Sep2024 15:07:31.800] [Toothless/INFO] [DragonLib/]:                            +++ 🐉 +++                             
+[18Sep2024 15:07:31.945] [modloading-worker-0/INFO] [MEGA Cells/]: Initialised items.
+[18Sep2024 15:07:31.985] [modloading-worker-0/INFO] [TrustedSourceList/]: Loaded 564 BlackListed sources from remote
+[18Sep2024 15:07:31.990] [modloading-worker-0/INFO] [MEGA Cells/]: Initialised blocks.
+[18Sep2024 15:07:31.992] [modloading-worker-0/INFO] [TrustManager/]: Loading mod 'commonality' TrustWorthiness...
+[18Sep2024 15:07:31.993] [modloading-worker-0/FATAL] [TrustManager/]: Could not determine mod trust worthiness, Assuming Jar was downloaded from trusted source!
+[18Sep2024 15:07:31.994] [modloading-worker-0/INFO] [TrustManager/]: Loaded mod 'commonality' TrustWorthiness: UNKNOWN
+[18Sep2024 15:07:32.037] [modloading-worker-0/INFO] [MEGA Cells/]: Initialised block entities.
+[18Sep2024 15:07:32.051] [modloading-worker-0/INFO] [TrustManager/]: Loading mod 'apexcore' TrustWorthiness...
+[18Sep2024 15:07:32.051] [modloading-worker-0/INFO] [TrustManager/]: Loading mod 'fantasyfurniture' TrustWorthiness...
+[18Sep2024 15:07:32.052] [modloading-worker-0/FATAL] [TrustManager/]: Could not determine mod trust worthiness, Assuming Jar was downloaded from trusted source!
+[18Sep2024 15:07:32.052] [modloading-worker-0/INFO] [TrustManager/]: Loaded mod 'apexcore' TrustWorthiness: UNKNOWN
+[18Sep2024 15:07:32.052] [modloading-worker-0/FATAL] [TrustManager/]: Could not determine mod trust worthiness, Assuming Jar was downloaded from trusted source!
+[18Sep2024 15:07:32.084] [modloading-worker-0/INFO] [Puzzles Lib/]: Constructing common components for puzzleslib:main
+[18Sep2024 15:07:32.143] [modloading-worker-0/INFO] [dev.tonimatas.packetfixer.PacketFixer/]: Packet Fixer has been initialized successfully
+[18Sep2024 15:07:32.237] [modloading-worker-0/INFO] [thedarkcolour.kotlinforforge.test.KotlinForForge/]: Kotlin For Forge Enabled!
+[18Sep2024 15:07:32.263] [modloading-worker-0/WARN] [mixin/]: @Inject(@At("INVOKE_ASSIGN")) Shift.BY=2 on valkyrienskies-common.mixins.json:mod_compat.create.block.MixinRedstoneContactBlock::handler$bgi000$injectTick exceeds the maximum allowed value: 0. Increase the value of maxShiftBy to suppress this warning.
+[18Sep2024 15:07:32.606] [modloading-worker-0/INFO] [Railways/]: Registered bogey styles from railways
+[18Sep2024 15:07:32.611] [modloading-worker-0/INFO] [dev.architectury.networking.forge.NetworkManagerImpl/]: Registering C2S receiver with id createrailwaysnavigator:crn_network/1d0ac4252cec31ad974c93918eb8736a
+[18Sep2024 15:07:32.621] [modloading-worker-0/INFO] [dev.architectury.networking.forge.NetworkManagerImpl/]: Registering C2S receiver with id createrailwaysnavigator:crn_network/bbbe938f50123ae1a33b88e7702baeea
+[18Sep2024 15:07:32.622] [modloading-worker-0/INFO] [dev.architectury.networking.forge.NetworkManagerImpl/]: Registering C2S receiver with id createrailwaysnavigator:crn_network/7ef86e5181523d3db4e2f82200447e8b
+[18Sep2024 15:07:32.622] [modloading-worker-0/INFO] [dev.architectury.networking.forge.NetworkManagerImpl/]: Registering C2S receiver with id createrailwaysnavigator:crn_network/a8b984aca0483ef78b864bf9f2aea80e
+[18Sep2024 15:07:32.623] [modloading-worker-0/INFO] [dev.architectury.networking.forge.NetworkManagerImpl/]: Registering C2S receiver with id createrailwaysnavigator:crn_network/a4b07d566354311dbfb4afc69c314726
+[18Sep2024 15:07:32.623] [modloading-worker-0/INFO] [dev.architectury.networking.forge.NetworkManagerImpl/]: Registering C2S receiver with id trainutilities:trainutilities_network/6f6b92f88f9d3407b620a7d631dcf3f9
+[18Sep2024 15:07:32.623] [modloading-worker-0/INFO] [dev.architectury.networking.forge.NetworkManagerImpl/]: Registering C2S receiver with id createrailwaysnavigator:crn_network/685f763aee52352ebea05f6dd442d557
+[18Sep2024 15:07:32.624] [modloading-worker-0/INFO] [dev.architectury.networking.forge.NetworkManagerImpl/]: Registering C2S receiver with id createrailwaysnavigator:crn_network/43caef3f3dec30568576203d12b10bf7
+[18Sep2024 15:07:32.624] [modloading-worker-0/INFO] [dev.architectury.networking.forge.NetworkManagerImpl/]: Registering C2S receiver with id createrailwaysnavigator:crn_network/67724a3b3531326f95653bc1614cf875
+[18Sep2024 15:07:32.626] [modloading-worker-0/INFO] [dev.architectury.networking.forge.NetworkManagerImpl/]: Registering C2S receiver with id createrailwaysnavigator:crn_network/24de284ed1a534cfb2664200bfb3b1e3
+[18Sep2024 15:07:32.628] [modloading-worker-0/INFO] [dev.architectury.networking.forge.NetworkManagerImpl/]: Registering C2S receiver with id createrailwaysnavigator:crn_network/719b62978114348a9d67f5bf04e4ea90
+[18Sep2024 15:07:32.629] [modloading-worker-0/INFO] [dev.architectury.networking.forge.NetworkManagerImpl/]: Registering C2S receiver with id createrailwaysnavigator:crn_network/830f6d92d9633e2f916bf733eb0b9a61
+[18Sep2024 15:07:32.630] [modloading-worker-0/INFO] [dev.architectury.networking.forge.NetworkManagerImpl/]: Registering C2S receiver with id createrailwaysnavigator:crn_network/5c835cb0e3b4349ea7abbf594560160f
+[18Sep2024 15:07:32.634] [modloading-worker-0/INFO] [dev.architectury.networking.forge.NetworkManagerImpl/]: Registering C2S receiver with id createrailwaysnavigator:crn_network/bee93fe017d03b659de7d1bc090ce35a
+[18Sep2024 15:07:32.634] [modloading-worker-0/INFO] [dev.architectury.networking.forge.NetworkManagerImpl/]: Registering C2S receiver with id createrailwaysnavigator:crn_network/cdcde435daae3fba8a42bb8799687e48
+[18Sep2024 15:07:32.635] [modloading-worker-0/INFO] [dev.architectury.networking.forge.NetworkManagerImpl/]: Registering C2S receiver with id createrailwaysnavigator:crn_network/b977ce0284d33fc79f13f0af88be87d7
+[18Sep2024 15:07:32.635] [modloading-worker-0/INFO] [dev.architectury.networking.forge.NetworkManagerImpl/]: Registering C2S receiver with id createrailwaysnavigator:crn_network/adecdf88fb7a3b969b956d7830ea92db
+[18Sep2024 15:07:32.640] [modloading-worker-0/INFO] [dev.architectury.networking.forge.NetworkManagerImpl/]: Registering C2S receiver with id createrailwaysnavigator:crn_network/5bab7ef58bee35718294293ce78aa556
+[18Sep2024 15:07:32.640] [modloading-worker-0/INFO] [dev.architectury.networking.forge.NetworkManagerImpl/]: Registering C2S receiver with id createrailwaysnavigator:crn_network/76c802420d82316d9a98b73c163ad7ed
+[18Sep2024 15:07:32.798] [modloading-worker-0/INFO] [Railways/]: Registering data fixers
+[18Sep2024 15:07:32.806] [modloading-worker-0/INFO] [com.mojang.datafixers.DataFixerBuilder/]: 0 Datafixer optimizations took 0 milliseconds
+[18Sep2024 15:07:32.815] [modloading-worker-0/INFO] [Railways/]: Registering tracks for Hex Casting
+[18Sep2024 15:07:32.816] [modloading-worker-0/INFO] [Railways/]: Registering tracks for Oh The Biomes You'll Go
+[18Sep2024 15:07:32.817] [modloading-worker-0/INFO] [Railways/]: Registering tracks for Blue Skies
+[18Sep2024 15:07:32.818] [modloading-worker-0/INFO] [Railways/]: Registering tracks for Twilight Forest
+[18Sep2024 15:07:32.819] [modloading-worker-0/INFO] [Railways/]: Registering tracks for Biomes O' Plenty
+[18Sep2024 15:07:32.820] [modloading-worker-0/INFO] [Railways/]: Registering tracks for Nature's Spirit
+[18Sep2024 15:07:32.823] [modloading-worker-0/INFO] [Railways/]: Registering tracks for Dreams and Desires
+[18Sep2024 15:07:32.826] [modloading-worker-0/INFO] [Railways/]: Registering tracks for Quark
+[18Sep2024 15:07:32.826] [modloading-worker-0/INFO] [Railways/]: Registering tracks for TerraFirmaCraft

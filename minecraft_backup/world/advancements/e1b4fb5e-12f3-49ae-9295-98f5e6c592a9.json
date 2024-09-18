@@ -15231,41 +15231,5 @@
     },
     "done": true
   },
-  "minecraft:recipes/misc/netherite_ingot": {
-    "criteria": {
-      "has_netherite_scrap": "2024-09-16 22:02:39 +0200"
-    },
-    "done": true
-  },
-  "minecraft:recipes/misc/netherite_upgrade_smithing_template": {
-    "criteria": {
-      "has_netherite_upgrade_smithing_template": "2024-09-16 21:18:24 +0200"
-    },
-    "done": true
-  },
-  "supplementaries:recipes/netherite_door": {
-    "criteria": {
-      "has_netherite_scrap": "2024-09-16 22:02:39 +0200"
-    },
-    "done": true
-  },
-  "iammusicplayer:recipes/misc/radio_antenna": {
-    "criteria": {
-      "has_ender_pearl": "2024-09-16 21:58:43 +0200"
-    },
-    "done": true
-  },
-  "minecraft:recipes/building_blocks/magma_block": {
-    "criteria": {
-      "has_magma_cream": "2024-09-16 21:18:26 +0200"
-    },
-    "done": true
-  },
-  "iammusicplayer:recipes/misc/parabolic_antenna": {
-    "criteria": {
-      "has_ender_pearl": "2024-09-16 21:58:43 +0200"
-    },
-    "done": true
-  },
   "DataVersion": 3465
 }

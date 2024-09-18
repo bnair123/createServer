@@ -3229,7 +3229,6 @@
       "minecraft:pillager": "2024-08-27 23:22:48 +0200",
       "minecraft:blaze": "2024-08-28 15:17:43 +0200",
       "minecraft:skeleton": "2024-08-27 23:27:22 +0200",
-      "minecraft:ghast": "2024-09-16 20:45:13 +0200",
       "minecraft:hoglin": "2024-08-28 02:19:43 +0200",
       "minecraft:magma_cube": "2024-08-28 02:47:37 +0200",
       "minecraft:spider": "2024-08-28 00:00:50 +0200",
@@ -15998,42 +15997,6 @@
   "immersive_paintings:misc/graffiti": {
     "criteria": {
       "has_item": "2024-09-15 19:22:32 +0200"
-    },
-    "done": true
-  },
-  "modulargolems:recipes/misc/metal_golem_template": {
-    "criteria": {
-      "has_clay": "2024-09-16 21:05:20 +0200"
-    },
-    "done": true
-  },
-  "modulargolems:recipes/combat/netherite_golem_sword": {
-    "criteria": {
-      "has_netherite_ingot": "2024-09-16 21:21:52 +0200"
-    },
-    "done": true
-  },
-  "modulargolems:recipes/combat/netherite_golem_axe": {
-    "criteria": {
-      "has_netherite_ingot": "2024-09-16 21:21:52 +0200"
-    },
-    "done": true
-  },
-  "createbigcannons:recipes/misc/impact_fuze": {
-    "criteria": {
-      "has_impact_fuze_head": "2024-09-16 20:47:33 +0200"
-    },
-    "done": true
-  },
-  "modulargolems:recipes/combat/netherite_golem_spear": {
-    "criteria": {
-      "has_netherite_ingot": "2024-09-16 21:21:52 +0200"
-    },
-    "done": true
-  },
-  "computercraft:recipes/redstone/computer_command": {
-    "criteria": {
-      "has_components": "2024-09-16 20:46:15 +0200"
     },
     "done": true
   },
